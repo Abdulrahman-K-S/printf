@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
-#include "_putchar.c"
+#include "../main.h"
 
 
 void _printf(unsigned int n, ...);
