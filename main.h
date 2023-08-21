@@ -7,6 +7,7 @@
 #include <stdarg.h>
 
 void _putchar(char c);
+int print_char(char c);
 int _puts(char *s);
 
 
