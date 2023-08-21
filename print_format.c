@@ -19,12 +19,12 @@ int _print_format(const char *format, va_list args)
 	{
 		if (format[i] == '%')
 		{
-			// Then i have met a specifer
+			/* Then i have met a specifer */
 
 			if (format[i + 1] == '\0')
 				return (length);
 
-			i++; // Now to check from after the '%'
+			i++; /* Now to check from after the '%' */
 
 			while (format[i] == ' ')
 				i++;
@@ -39,7 +39,7 @@ int _print_format(const char *format, va_list args)
 				length += _print_int(args);
 		}
 		else
-			// Then there's no specifer just a character
+			/* Then there's no specifer just a character */
 			length += _putchar(format[i]);
 
 		i++;
