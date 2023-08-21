@@ -1,6 +1,30 @@
 #include "main.h"
 
 /**
+ * _print_char - A function that prints a character from the
+ *               argument pointer recieved.
+ *
+ * @args: Argument pointer.
+ *
+ * Return: 1 which is the character printed.
+*/
+int _print_char(va_list args)
+{
+}
+
+/**
+ * _print_string - A function that'll print a string from the
+ *                 argument pointer it recived.
+ *
+ * @args: Argument pointer.
+ *
+ * Return: The number of characters printed.
+*/
+int _print_string(va_list args)
+{
+}
+
+/**
  * _print_int - A function that counts up an integer and sends it to
  *              get printed to std.
  *
@@ -30,5 +54,19 @@ int _print_int(va_list args)
 		count++;
 	}
 
+	_integer_recursion(toprint);
 	return (count);
+}
+
+/**
+ * _integer_recursion - A function that uses recursion to print out the
+ *                      the integer it recived.
+ *
+ * @integer: The integer to be printed.
+*/
+void _integer_recursion(int integer)
+{
+	if (integer / 10)
+		_integer_recursion(integer / 10);
+	_putchar(integer % 10 + '0');
 }
