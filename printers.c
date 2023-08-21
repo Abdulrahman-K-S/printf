@@ -22,6 +22,17 @@ int _print_char(va_list args)
 */
 int _print_string(va_list args)
 {
+	int length = 0;
+
+	if (!args)
+	{
+		length = _puts("(null)");
+	}
+	else
+	{
+		length = _puts(args);
+	}
+	return (length);
 }
 
 /**
