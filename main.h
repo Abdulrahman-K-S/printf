@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+void _putchar(char c);
+int _puts(char *s);
 
 
 #endif
