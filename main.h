@@ -6,9 +6,9 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-void _putchar(char c);
-int print_char(char c);
+/* Our printers */
+int _putchar(char c);
 int _puts(char *s);
-
+int print_char(char c);
 
 #endif

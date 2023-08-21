@@ -6,6 +6,7 @@
  *
  * Return: always 0
 */
+
 int _puts(char *s)
 {
 	int i = 0;
