@@ -3,7 +3,6 @@
 
 /* The libraries that we'll need */
 #include <unistd.h>
-#include <stdlib.h>
 #include <stdarg.h>
 
 /* Our printers */
