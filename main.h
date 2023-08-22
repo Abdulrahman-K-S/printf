@@ -16,6 +16,8 @@ int _print_char(va_list args);
 int _print_string(va_list args);
 int _print_int(va_list args);
 void _integer_recursion(int integer);
+int dec_binary(va_list args);
+int recursion_binary(int b);
 
 /* print_format.c module */
 /* The function that'll determine which specifer to print */
