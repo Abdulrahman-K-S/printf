@@ -83,7 +83,7 @@ int _print_int(va_list args)
 */
 void _integer_recursion(int integer)
 {
-	unsinged int t = integer;
+	unsigned int t = integer;
 
 	if (t / 10)
 		_integer_recursion(t / 10);
