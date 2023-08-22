@@ -37,6 +37,11 @@ int _print_format(const char *format, va_list args)
 				length += _print_string(args);
 			else if (format[i] == 'd' || format[i] == 'i')
 				length += _print_int(args);
+			else
+			{
+				length += _putchar('%');
+				length += _putchar(format[i]);
+			}
 		}
 		else
 			/* Then there's no specifer just a character */
