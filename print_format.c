@@ -37,6 +37,8 @@ int _print_format(const char *format, va_list args)
 				length += _print_string(args);
 			else if (format[i] == 'd' || format[i] == 'i')
 				length += _print_int(args);
+			else if (format[i] == 'b')
+				length += dec_binary(args);
 			else
 			{
 				length += _putchar('%');
