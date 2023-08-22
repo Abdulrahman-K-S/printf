@@ -10,6 +10,20 @@
 */
 int _print_char(va_list args)
 {
+	int length = 0;
+	char arg;
+
+	arg = va_arg(args, char);
+
+	if (!arg)
+	{
+		length = _puts("(null)");
+	}
+	else
+	{
+		length = _putchar(arg);
+	}
+	return (length);
 }
 
 /**
