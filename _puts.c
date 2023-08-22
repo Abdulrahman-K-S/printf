@@ -16,6 +16,5 @@ int _puts(char *s)
 		_putchar(s[i]);
 		i++;
 	}
-	_putchar('\0');
 	return (i);
 }
