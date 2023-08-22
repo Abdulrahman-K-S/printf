@@ -83,7 +83,9 @@ int _print_int(va_list args)
 */
 void _integer_recursion(int integer)
 {
-	if (integer / 10)
-		_integer_recursion(integer / 10);
-	_putchar(integer % 10 + '0');
+	unsinged int t = integer;
+
+	if (t / 10)
+		_integer_recursion(t / 10);
+	_putchar(t % 10 + '0');
 }
