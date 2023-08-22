@@ -23,14 +23,17 @@ int _print_char(va_list args)
 int _print_string(va_list args)
 {
 	int length = 0;
+	char *arg;
 
-	if (!args)
+	arg = va_arg(args, char *);
+
+	if (!arg)
 	{
 		length = _puts("(null)");
 	}
 	else
 	{
-		length = _puts(args);
+		length = _puts(arg);
 	}
 	return (length);
 }
