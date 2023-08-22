@@ -22,7 +22,7 @@ int _print_format(const char *format, va_list args)
 			/* Then i have met a specifer */
 
 			if (format[i + 1] == '\0')
-				return (length);
+				return (-1);
 
 			i++; /* Now to check from after the '%' */
 
@@ -32,9 +32,9 @@ int _print_format(const char *format, va_list args)
 			if (format[i] == '%')
 				length += _putchar(format[i]);
 			else if (format[i] == 'c')
-				length += _putchar(va_arg(args, int));
+				length += _print_char(args);
 			else if (format[i] == 's')
-				length += _puts(va_arg(args, char *));
+				length += _print_string(args);
 			else if (format[i] == 'd' || format[i] == 'i')
 				length += _print_int(args);
 		}
