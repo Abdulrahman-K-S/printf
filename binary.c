@@ -8,28 +8,26 @@
 */
 int dec_binary(va_list args)
 {
-	unsigned int arg;
-	long to_print = 0;
-	long answer = 0;
-	int count = 1;
+	unsigned int to_print;
+	int count = 1, arg = 0;
 
-	arg = va_arg(args, long);
+	arg = va_arg(args, int);
 	to_print = arg;
 
 	if (arg < 0)
 	{
 		_putchar('1');
-		to_print *= -1;
-		arg = to_print;
+		arg *= -1;
+		to_print = arg;
 		count++;
 	}
 
-	while (arg > 0)
+	while (to_print > 0)
 	{
-		arg /= 2;
+		to_print /= 2;
 		count++;
 	}
-	answer = recursion_binary(to_print);
+
 	_long_recursion(arg);
 	return (count);
 }
