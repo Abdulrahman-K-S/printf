@@ -15,15 +15,23 @@ int dec_binary(va_list args)
 
 	arg = va_arg(args, long);
 	to_print = arg;
-	while (arg > 1)
+
+	if (arg < 0)
+	{
+		_putchar('1');
+		to_print *= -1;
+		arg = to_print;
+		count++;
+	}
+
+	while (arg > 0)
 	{
 		arg /= 2;
 		count++;
 	}
 	answer = recursion_binary(to_print);
-	_long_recursion(answer);
+	_long_recursion(arg);
 	return (count);
-
 }
 /**
  * recursion_binary - takes a decimal number and returns binary
@@ -46,7 +54,9 @@ long recursion_binary(long b)
 */
 void _long_recursion(long binary)
 {
-	if (binary / 10)
-		_long_recursion(binary / 10);
-	_putchar(binary % 10 + '0');
+	unsigned int t = binary;
+
+	if (t / 10)
+		_long_recursion(t / 10);
+	_putchar(t % 10 + '0');
 }
