@@ -10,7 +10,7 @@
 int _print_unsigned(va_list args)
 {
 	int length = 1;
-	unsigned arg, temp;
+	unsigned int arg, temp;
 
 	arg = va_arg(args, unsigned int);
 	temp = arg;
