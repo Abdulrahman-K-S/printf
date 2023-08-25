@@ -30,8 +30,7 @@ void _integer_recursion(int integer);
 
 /* b-u_printers.c modules */
 int _print_binary(va_list args);
-long recursion_binary(long b);
-void _long_recursion(long binary);
+void _binary_recursion(int integer);
 int _print_unsigned(va_list args);
 void _unsigned_recursion(int integer);
 
