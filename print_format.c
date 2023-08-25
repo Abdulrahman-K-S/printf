@@ -65,7 +65,7 @@ int isValidSpecifier(char type)
 	while (types[i])
 	{
 		if (types[i] == type)
-			return;
+			return (1);
 
 		i++;
 	}
@@ -86,17 +86,17 @@ int _print_specifier(char format, va_list args)
 {
 	int i = 0, length = 0;
 	spec_t types[] = {
-		{'c', _print_char},
-		{'s', _print_string},
-		{'d', _print_int},
-		{'i', _print_int},
-		{'b', _print_binary},
+		{"c", _print_char},
+		{"s", _print_string},
+		{"d", _print_int},
+		{"i", _print_int},
+		{"b", _print_binary},
 		{NULL, NULL}
-	}
+	};
 
 	while (types[i].specifier)
 	{
-		if (types[i].specifier == format)
+		if (*types[i].specifier == format)
 			length += types[i].f(args);
 
 		i++;
