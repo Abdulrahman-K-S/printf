@@ -30,8 +30,7 @@ int _print_format(const char *format, va_list args)
 
 			if (format[i] == '%')
 				length += _putchar(format[i]);
-
-			if (isValidSpecifier(format[i]))
+			else if (isValidSpecifier(format[i]))
 				length += _print_specifier(format[i], args);
 			else
 			{
