@@ -35,6 +35,8 @@ long recursion_binary(long b);
 /* print_format.c module */
 /* The function that'll determine which specifer to print */
 int _print_format(const char *format, va_list args);
+int isValidSpecifier(char type);
+int _print_specifier(char format, va_list args);
 
 /* The _printf function */
 int _printf(const char *format, ...);
