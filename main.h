@@ -39,6 +39,12 @@ void _unsigned_recursion(int integer);
 int _print_octal(va_list args);
 void _octal_recursion(int integer);
 
+/* x-X_printers.c modules */
+int _print_hex(va_list args);
+int _print_HEX(va_list args);
+void _hex_recursion(int integer);
+void _HEX_recursion(int integer);
+
 /* print_format.c module */
 /* The function that'll determine which specifer to print */
 int _print_format(const char *format, va_list args);
