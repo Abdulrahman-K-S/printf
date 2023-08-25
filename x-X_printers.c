@@ -9,7 +9,7 @@
 */
 int _print_hex(va_list args)
 {
-	int length = 1, remainder;
+	int length = 1;
 	unsigned int temp, arg;
 
 	arg = va_arg(args, unsigned int);
@@ -34,7 +34,7 @@ int _print_hex(va_list args)
 */
 int _print_HEX(va_list args)
 {
-	int length = 1, remainder;
+	int length = 1;
 	unsigned int temp, arg;
 
 	arg = va_arg(args, unsigned int);
