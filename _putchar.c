@@ -10,5 +10,15 @@
 
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	int i;
+	char buf[OUT_BUF_S];
+
+	if (c == BF_FLUSH || i >= OUT_BUF_S)
+	{
+		write(1, buf, i);
+		i = 0;
+	}
+	if (c != BF_FLUSH)
+		buf[i++] = c;
+	return (1);
 }
