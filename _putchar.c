@@ -10,8 +10,8 @@
 
 int _putchar(char c)
 {
-	int i;
-	char buf[OUT_BUF_S];
+	static int i;
+	static char buf[OUT_BUF_S];
 
 	if (c == BF_FLUSH || i >= OUT_BUF_S)
 	{
