@@ -6,9 +6,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-#define OUT_BUF_S 1024
-#define BF_FLUSH -1
-
 /**
  * struct specifiers - A specifier struct.
  *
