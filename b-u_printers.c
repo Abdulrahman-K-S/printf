@@ -1,54 +1,44 @@
 #include "main.h"
 
 /**
- * _print_binary - takes a decimal number and prints a binary one
- * @args: argument pointer
+ * _print_binary - A function that voncerts an unsigned int into binary
+ *                 and prints it.
  *
- * Return: the number of binary numbers
+ * @args: Argument pointer
+ *
+ * Return: The number of characters printed.
 */
 int _print_binary(va_list args)
 {
-	unsigned int arg;
-	long to_print = 0;
-	long answer = 0;
-	int count = 1;
+	int length = 1;
+	unsigned int arg, temp;
 
-	arg = va_arg(args, long);
-	to_print = arg;
-	while (arg > 1)
+	arg = va_arg(args, unsigned int);
+	temp = arg;
+
+	while (temp > 1)
 	{
-		arg /= 2;
-		count++;
+		temp /= 2;
+		length++;
 	}
-	answer = recursion_binary(to_print);
-	_long_recursion(answer);
-	return (count);
 
+	_binary_recursion(arg);
+	return (length);
 }
-/**
- * recursion_binary - takes a decimal number and returns binary
- * @b: decimal integer input
- *
- * Return: binary number
-*/
-long recursion_binary(long b)
-{
-	if (b < 2)
-		return (b);
 
-	return (recursion_binary(b / 2) * 10 + b % 2);
-}
 /**
- * _long_recursion - takes a binary number and prints it
- * @binary: binary
+ * _binary_recursion - A function that uses recursion to print out the
+ *                     the integer it recived in binary.
  *
- * Return: nothing
+ * @integer: The integer to be printed.
 */
-void _long_recursion(long binary)
+void _binary_recursion(int integer)
 {
-	if (binary / 10)
-		_long_recursion(binary / 10);
-	_putchar(binary % 10 + '0');
+	unsigned int t = integer;
+
+	if (t / 2)
+		_binary_recursion(t / 2);
+	_putchar(t % 2 + '0');
 }
 
 /**
