@@ -58,7 +58,7 @@ int _print_format(const char *format, va_list args)
  */
 int isValidSpecifier(char type)
 {
-	char types[] = {'c', 's', 'd', 'i', 'b', 'u', 'o'};
+	char types[] = {'c', 's', 'd', 'i', 'b', 'u', 'o', 'x', 'X'};
 	int i = 0;
 
 	while (types[i])
@@ -92,6 +92,8 @@ int _print_specifier(char format, va_list args)
 		{"b", _print_binary},
 		{"u", _print_unsigned},
 		{"o", _print_octal},
+		{"x", _print_hex},
+		{"X", _print_HEX},
 		{NULL, NULL}
 	};
 
