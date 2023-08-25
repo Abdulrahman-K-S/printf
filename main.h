@@ -22,18 +22,22 @@ typedef struct specifiers
 int _putchar(char c);
 int _puts(char *s);
 
-/* printers.c modules */
+/* c-s-i-d_printers.c modules */
 int _print_char(va_list args);
 int _print_string(va_list args);
 int _print_int(va_list args);
 void _integer_recursion(int integer);
 
-/* more_printers.c modules */
+/* b-u_printers.c modules */
 int _print_binary(va_list args);
 long recursion_binary(long b);
 void _long_recursion(long binary);
 int _print_unsigned(va_list args);
 void _unsigned_recursion(int integer);
+
+/* o_printers.c modules */
+int _print_octal(va_list args);
+void _octal_recursion(int integer);
 
 /* print_format.c module */
 /* The function that'll determine which specifer to print */
