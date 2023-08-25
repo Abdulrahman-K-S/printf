@@ -10,7 +10,6 @@
  *
  * Return: The number of characters printed.
 */
-
 int _print_format(const char *format, va_list args)
 {
 	int length = 0, i = 0;
@@ -31,14 +30,9 @@ int _print_format(const char *format, va_list args)
 
 			if (format[i] == '%')
 				length += _putchar(format[i]);
-			else if (format[i] == 'c')
-				length += _print_char(args);
-			else if (format[i] == 's')
-				length += _print_string(args);
-			else if (format[i] == 'd' || format[i] == 'i')
-				length += _print_int(args);
-			else if (format[i] == 'b')
-				length += dec_binary(args);
+
+			if (isValidSpecifier(format[i]))
+				length += _print_specifier(format[i], args);
 			else
 			{
 				length += _putchar('%');
@@ -48,6 +42,62 @@ int _print_format(const char *format, va_list args)
 		else
 			/* Then there's no specifer just a character */
 			length += _putchar(format[i]);
+
+		i++;
+	}
+
+	return (length);
+}
+
+/**
+ * isValidSpecifier - A function that checks if the inputed argument is a valid
+ *                    specifier or not.
+ *
+ * @type: The char to check if it's valid or not.
+ *
+ * Return: (1) if it's valid otherwise (0).
+ */
+int isValidSpecifier(char type)
+{
+	char types[] = {'c', 's', 'd', 'i', 'b'};
+	int i = 0;
+
+	while (types[i])
+	{
+		if (types[i] == type)
+			return;
+
+		i++;
+	}
+
+	return (0);
+}
+
+/**
+ * _print_specifier - A function that takes a specifier and calls it's
+ *                    respective function.
+ *
+ * @format: The char specifier.
+ * @args: Argument pointer.
+ *
+ * Return: The length of what got printed.
+ */
+int _print_specifier(char format, va_list args)
+{
+	int i = 0, length = 0;
+	spec_t types[] = {
+		{'c', _print_char},
+		{'s', _print_string},
+		{'d', _print_int},
+		{'i', _print_int},
+		{'b', _print_binary},
+		{NULL, NULL}
+	}
+
+	while (types[i].specifier)
+	{
+		if (types[i].specifier == format)
+			length += types[i].f(args);
 
 		i++;
 	}
