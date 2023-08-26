@@ -22,9 +22,19 @@
         - [int _print_string(va_list args)](#int-_print_stringva_list-args).
         - [int _print_int(va_list args)](#int-_print_intva_list-args).
         - [void _integer_recursion(int integer)](#void-_integer_recursionint-integer).
-    - [b-u_printers.c Modules]().
-    - [o-printers.c Modules]().
-    - [x-X_printers.c Modules]().
+    - [b-u_printers.c Modules](#b-u_printersc-modules).
+        - [int _print_binary(va_list args)](#int-_print_binaryva_list-args).
+        - [void _binary_recursion(int integer)](#void-_binary_recursionint-integer).
+        - [int _print_unsigned(va_list args)](#int-_print_unsignedva_list-args).
+        - [void _unsigned_recursion(int integer)](#void-_unsigned_recursionint-integer).
+    - [o-printers.c Modules](#o_printersc-modules).
+        - [int _print_octal(va_list args)](#int-_print_octalva_list-args).
+        - [void _octal_recursion(int integer)](#void-_octal_recursionint-integer).
+    - [x-X_printers.c Modules](#x-x_printersc-modules).
+        - [int _print_hex(va_list args)](#int-_print_hexva_list-args).
+        - [void _hex_recursion(int integer)](#void-_hex_recursionint-integer).
+        - [int _print_HEX(va_list args)](#int-_print_hexva_list-args-1).
+        - [void _HEX_recursion(int integer)](#void-_hex_recursionint-integer-1).
     - [print_format.c Modules](#print_formatc-modules).
         - [int _print_format(const char *format, va_list args)](#int-_print_formatconst-char-format-va_list-args).
         - [int isValidSpecifier(char _type)](#int-isvalidspecifierchar-_type).
