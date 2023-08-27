@@ -11,34 +11,34 @@
     - [Formating of the string](#format-of-the-format-string).
     - [Conversion Specifiers](#conversion-specifiers).
 - [Information on each function](#about-functions).
-    - [_printf.c Modules](#_printfc-modules).
-        - [int _printf(const char *format, ...)](#int-_printfconst-char-format).
-    - [_putchar.c Modules]().
-        - [int _putchar(char c)](#int-_putcharchar-c).
-    - [_puts.c Modules]().
-        - [int _puts(char *s)](#int-_putschar-s).
-    - [c-s-i-d_printers.c Modules](#c-s-i-d_printersc-modules).
-        - [int _print_char(va_list args)](#int-_print_charva_list-args).
-        - [int _print_string(va_list args)](#int-_print_stringva_list-args).
-        - [int _print_int(va_list args)](#int-_print_intva_list-args).
-        - [void _integer_recursion(int integer)](#void-_integer_recursionint-integer).
-    - [b-u_printers.c Modules](#b-u_printersc-modules).
-        - [int _print_binary(va_list args)](#int-_print_binaryva_list-args).
-        - [void _binary_recursion(int integer)](#void-_binary_recursionint-integer).
-        - [int _print_unsigned(va_list args)](#int-_print_unsignedva_list-args).
-        - [void _unsigned_recursion(int integer)](#void-_unsigned_recursionint-integer).
-    - [o-printers.c Modules](#o_printersc-modules).
-        - [int _print_octal(va_list args)](#int-_print_octalva_list-args).
-        - [void _octal_recursion(int integer)](#void-_octal_recursionint-integer).
-    - [x-X_printers.c Modules](#x-x_printersc-modules).
-        - [int _print_hex(va_list args)](#int-_print_hexva_list-args).
-        - [void _hex_recursion(int integer)](#void-_hex_recursionint-integer).
-        - [int _print_HEX(va_list args)](#int-_print_hexva_list-args-1).
-        - [void _HEX_recursion(int integer)](#void-_hex_recursionint-integer-1).
-    - [print_format.c Modules](#print_formatc-modules).
-        - [int _print_format(const char *format, va_list args)](#int-_print_formatconst-char-format-va_list-args).
-        - [int isValidSpecifier(char _type)](#int-isvalidspecifierchar-_type).
-        - [int _print_specifier(char format, va_list args)](#int-_print_specifierchar-format-va_list-args).
+    - [_printf.c Modules](#i-_printfc-modules). 
+        - [int _printf(const char *format, ...)](#1-int-_printfconst-char-format).
+    - [_putchar.c Modules](#ii-_putcharc-modules). 
+        - [int _putchar(char c)](#1-int-_putcharchar-c).
+    - [_puts.c Modules](#iii-_putsc-modules). 
+        - [int _puts(char *s)](#1-int-_putschar-s).
+    - [c-s-i-d_printers.c Modules](#iiii-c-s-i-d_printersc-modules). 
+        - [int _print_char(va_list args)](#1-int-_print_charva_list-args).
+        - [int _print_string(va_list args)](#2-int-_print_stringva_list-args).
+        - [int _print_int(va_list args)](#3-int-_print_intva_list-args).
+        - [void _integer_recursion(int integer)](#4-void-_integer_recursionint-integer).
+    - [b-u_printers.c Modules](#x-b-u_printersc-modules). 
+        - [int _print_binary(va_list args)](#1-int-_print_binaryva_list-args).
+        - [void _binary_recursion(int integer)](#2-void-_binary_recursionint-integer).
+        - [int _print_unsigned(va_list args)](#3-int-_print_unsignedva_list-args).
+        - [void _unsigned_recursion(int integer)](#4-void-_unsigned_recursionint-integer).
+    - [o-printers.c Modules](#xi-o_printersc-modules). 
+        - [int _print_octal(va_list args)](#1-int-_print_octalva_list-args).
+        - [void _octal_recursion(int integer)](#2-void-_octal_recursionint-integer).
+    - [x-X_printers.c Modules](#xii-x-x_printersc-modules). 
+        - [int _print_hex(va_list args)](#1-int-_print_hexva_list-args).
+        - [void _hex_recursion(int integer)](#2-void-_hex_recursionint-integer).
+        - [int _print_HEX(va_list args)](#3-int-_print_hexva_list-args).
+        - [void _HEX_recursion(int integer)](#4-void-_hex_recursionint-integer).
+    - [print_format.c Modules](#xiii-print_formatc-modules).
+        - [int _print_format(const char *format, va_list args)](#1-int-_print_formatconst-char-format-va_list-args).
+        - [int isValidSpecifier(char _type)](#2-int-isvalidspecifierchar-_type).
+        - [int _print_specifier(char format, va_list args)](#3-int-_print_specifierchar-format-va_list-args).
 - [Return Value](#return-value).
 - [Authors](#author).
 
@@ -72,135 +72,151 @@ A character that specifies the type of conversion to be applied. The conversion 
 
 <br>
 
-### _printf.c modules
+### I. _printf.c modules
+
+File: [_printf.c](_printf.c).
 
 <hr>
 
-#### int _printf(const char *format, ...)
+#### 1. int _printf(const char *format, ...)
 A function that takes in a format of string and accordingly write it out to the stdout, the standard output stream.
 
 <br>
 
-### _putchar.c modules
+### II. _putchar.c modules
+
+File: [_putchar.c](_putchar.c).
 
 <hr>
 
-#### int _putchar(char c)
+#### 1. int _putchar(char c)
 This function gets a char parameter and writes the parameter to the stdout, the standard output stream.
 
 <br>
 
-### _puts.c modules
+### III. _puts.c modules
+
+File: [_puts.c](_puts.c).
 
 <hr>
 
-#### int _puts(char *s)
+#### 1. int _puts(char *s)
 This function gets a char * (aka a string) and writes the parameter to the stdout, the standard output stream.
 
 <br>
 
-### c-s-i-d_printers.c modules
+### IIII. c-s-i-d_printers.c modules
+
+File: [c-s-i-d_printers.c](c-s-i-d_printers.c).
 
 <hr>
 
-#### int _print_char(va_list args)
+#### 1. int _print_char(va_list args)
 This function is called if there's a `c` specifier. It takes in a variadic argument list, traverses that list and write out the char to stdout.
 
 <br>
 
-#### int _print_string(va_list args)
+#### 2. int _print_string(va_list args)
 This function is called if there's a `s` specifier. It takes in a variadic argument list, traverses that list and write out the string to stdout.
 
 <br>
 
-#### int _print_int(va_list args)
+#### 3. int _print_int(va_list args)
 This function is called if there's a `d` or `i` specifier. It takes in a variadic argument list, traverses that list and calls _integer_recursion to write out the integer to stdout.
 
 <br>
 
-#### void _integer_recursion(int integer)
+#### 4. void _integer_recursion(int integer)
 This function gets an integer and prints the last digit of the number as recursion is applied. Called inside of _print_int().
 
 <br>
 
-### b-u_printers.c modules
+### X. b-u_printers.c modules
+
+File: [b-u_printers.c](b-u_printers.c).
 
 <hr>
 
-#### int _print_binary(va_list args)
+#### 1. int _print_binary(va_list args)
 This function is called if there's a `b` specifier. It takes in a variadic argument list, traverses that list and calls _binary_recursion to write out the binary to stdout.
 
 <br>
 
-#### void _binary_recursion(int integer)
+#### 2. void _binary_recursion(int integer)
 This function gets an integer and prints the last digit of the binary of that number as recursion is applied. Called inside of _print_binary().
 
 <br>
 
-#### int _print_unsigned(va_list args)
+#### 3. int _print_unsigned(va_list args)
 This function is called if there's a `u` specifier. It takes in a variadic argument list, traverses that list and calls _unsigned_recursion to write out the unsigned int to stdout.
 
 <br>
 
-#### void _unsigned_recursion(int integer)
+#### 4. void _unsigned_recursion(int integer)
 This function gets an integer and prints the last digit of the number as recursion is applied. Called inside of _print_unsigned().
 
 <br>
 
-### o_printers.c modules
+### XI. o_printers.c modules
+
+File: [o-printers.c](o-printers.c).
 
 <hr>
 
-#### int _print_octal(va_list args)
+#### 1. int _print_octal(va_list args)
 This function is called if there's a `o` specifier. It takes in a variadic argument list, traverses that list and calls _octal_recursion to write out the octal number to stdout.
 
 <br>
 
-#### void _octal_recursion(int integer)
+#### 2. void _octal_recursion(int integer)
 This function gets an integer and prints the last digit of the number as recursion is applied. Called inside of _print_octal().
 
 <br>
 
-### x-X_printers.c modules
+### XII. x-X_printers.c modules
+
+File: [x-X_printers.c](x-X_printers.c).
 
 <hr>
 
-#### int _print_hex(va_list args)
+#### 1. int _print_hex(va_list args)
 This function is called if there's a `x` specifier. It takes in a variadic argument list, traverses that list and calls _hex_recursion to write out the hex number in lowercase to stdout.
 
 <br>
 
-#### void _hex_recursion(int integer)
+#### 2. void _hex_recursion(int integer)
 This function gets an integer and prints the last digit of the number as recursion is applied. Called inside of _print_hex().
 
 <br>
 
-#### int _print_HEX(va_list args) 
+#### 3. int _print_HEX(va_list args) 
 This function is called if there's a `X` specifier. It takes in a variadic argument list, traverses that list and calls _hex_recursion to write out the hex number in uppercase to stdout.
 
 <br>
 
-#### void _HEX_recursion(int integer)
+#### 4. void _HEX_recursion(int integer)
 This function gets an integer and prints the last digit of the number as recursion is applied. Called inside of _print_HEX().
 
 <br>
 
-### print_format.c modules
+### XIII. print_format.c modules
+
+File: [print_format.c](print_format.c).
 
 <hr>
 
-#### int _print_format(const char *format, va_list args);
+#### 1. int _print_format(const char *format, va_list args);
 This function gets a format to be printed and a variadic arguments list, next to check if the
 format is valid or invalid and according with the verification the resulting output is written to the standard output stream and returns the format length.
 
 <br>
 
-#### int isValidSpecifier(char _type)
+#### 2. int isValidSpecifier(char _type)
 Gets a type and checks if the passed parameter is present in a structure of valid conversion specifiers. Next, returns if the parameter is valid or invalid.
 
 <br>
 
-#### int _print_specifier(char format, va_list args)
+#### 3. int _print_specifier(char format, va_list args)
 This function gets a format valid to be printed and a variadic arguments list to find the format in the
 list and selects the appropriate function to execute and writes the format to the standard output stream and returns the length of the valid format.
 
