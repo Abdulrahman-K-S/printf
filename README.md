@@ -68,7 +68,7 @@ A character that specifies the type of conversion to be applied. The conversion 
 
 <br>
 
-## About Functions
+## Information on each function
 
 <br>
 
